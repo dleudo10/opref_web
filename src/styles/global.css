@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.content-secondary {
+    @apply 
+    relative w-full min-h-[580px] overflow-hidden bg-blue-900 z-30
+    before:absolute before:-z-10 before:w-[200%] before:h-full before:bg-slate-100 before:-top-[150px] before:right-[-50%] before:rounded-b-[200%]
+    after:absolute after:-z-20 after:w-[200%] after:h-full after:bg-blue-100 after:-top-[90px] after:right-[-40%] after:rounded-b-[200%]
+}
+
+.content-primary {
+    @apply  
+    relative w-full min-h-[580px] overflow-hidden bg-slate-100 z-30
+    before:absolute before:-z-10 before:w-[200%] before:h-full before:bg-blue-900 before:-top-[150px] before:right-[-50%] before:rounded-b-[200%]
+    after:absolute after:-z-20 after:w-[200%] after:h-full after:bg-blue-700 after:-top-[90px] after:right-[-40%] after:rounded-b-[200%]
+}
+
+            

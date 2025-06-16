@@ -1,22 +1,92 @@
+---
+import "./src/styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- METADATA -->
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Empresa especializada en construcción de casas prefabricadas en Colombia. OPREF S.A.S ofrece soluciones habitacionales dignas, modernas y accesibles."
+		/>
+		<meta
+			name="keywords"
+			content="casas prefabricadas, construcción, OPREF, viviendas económicas, viviendas en Colombia, casas modernas, casas"
+		/>
+		<meta name="author" content="OPREF S.A.S." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://tudominio.com/" />
+
+		<meta property="og:title" content="OPREF S.A.S - Viviendas Prefabricadas" />
+		<meta property="og:description" content="Construimos hogares modernos, seguros y accesibles en toda Colombia." />
+		<meta property="og:image" content="https://tudominio.com/obra-blanca-servicio-destacado.jpeg" />
+		<meta property="og:url" content="https://tudominio.com/" />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="OPREF S.A.S - Viviendas Prefabricadas" />
+		<meta name="twitter:description" content="Construimos hogares modernos, seguros y accesibles en toda Colombia." />
+		<meta name="twitter:image" content="https://tudominio.com/obra-blanca-servicio-destacado.jpeg" />
+
+		<link rel="icon" href="/opref_logo.png" type="image/x-icon" />
+
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- BOOTSTRAP ICONS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+		/>
+
+		<!-- TITLE -->
+		<title>OPREF S.A.S</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main class="main">
+			<slot />
+		</main>
+		<Footer />
+
+		<a
+			href="https://wa.me/573337259205"
+			target="_blank"
+			class="fixed bottom-5 right-5 z-50 w-16 h-16 flex items-center justify-center bg-green-500 rounded-full"
+		>
+			<img
+				src="/Digital_Glyph_White.svg"
+				alt="WhatsApp"
+				class="w-10 h-10"
+			/>
+		</a>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
+	* {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Poppins", sans-serif;
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	.main {
+		flex: 1;
 	}
 </style>

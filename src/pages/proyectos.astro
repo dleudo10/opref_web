@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+const projects = [
+    {
+        img: "/obra-blanca-servicio-destacado.jpeg",
+        title: "Casa prefabricada 2 pisos y jardín",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-2.jpeg",
+        title: "Kiosco prefabricado",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-7.jpeg",
+        title: "Casa prefabricada 2 pisos en placa lisa",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-1.jpeg",
+        title: "Casa prefabricada 2 pisos en Obra gris",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-3.jpeg",
+        title: "Casa prefabricada en placa tipo ladrillo",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-4.jpeg",
+        title: "Casa prefabricada en placa tipo ladrillo",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-5.jpeg",
+        title: "Casa prefabricada en placa lisa",
+        adress: "Montería, Colombia",
+    },
+    {
+        img: "/index-8.jpeg",
+        title: "Casa prefabricada 2 pisos en placa tipo ladrillo",
+        adress: "Montería, Colombia",
+    },
+    
+];
+---
+
+<Layout>
+    <section class="content-secondary bg-slate-100 pb-[100px] pt-[50px] px-15">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                    Galería de proyectos
+                </h2>
+                <p class="text-gray-600 mt-2 text-lg">
+                    Descubre algunos de nuestros proyectos destacados en diferentes regiones del país. 
+                    Cada obra refleja nuestro compromiso con la calidad, la funcionalidad y el sueño 
+                    de construir hogares dignos para todos.
+                </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2">
+                {
+                    projects.map((item) => (
+                        <div class="bg-slate-50 rounded overflow-hidden shadow hover:shadow-lg transition">
+                            <img
+                                src={item.img}
+                                alt="Proyecto 1"
+                                class="w-full h-100 object-cover"
+                            />
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-blue-800">
+                                    {item.title}
+                                </h3>
+                                <p class="text-gray-600 text-sm">
+                                    {item.adress}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -1,0 +1,83 @@
+---
+const data = {
+    phone: "+57 3337259205",
+    adress: "Calle 41 N° 25 -175, Glorieta Terminal de Transporte / Montería",
+    email: "oprefsas@hotmail.com",
+    socialNetworks: [
+        {
+            icon: "bi bi-facebook",
+            url: "https://www.facebook.com/profile.php?id=100069441393393",
+        },
+        {
+            icon: "bi bi-whatsapp",
+            url: "https://wa.me/573337259205",
+        },
+    ],
+};
+---
+
+<footer class="w-full bg-blue-900 text-white px-15 py-10">
+    <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section>
+            <h2 class="text-4xl font-semibold mb-2">OPREF S.A.S</h2>
+            <p class="text-sm mb-4 italic">
+                Obras Prefabricadas de calidad en toda Colombia
+            </p>
+            <p class="text-sm">
+                Somos una empresa comprometida con la construcción de espacios
+                dignos y modernos, sin importar el estrato social. Brindamos
+                soluciones prácticas, rápidas y económicas con nuestros
+                productos prefabricados.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold mb-2">Enlaces útiles</h2>
+            <ul class="space-y-2 text-sm">
+                <li><a href="/" class="hover:underline">Inicio</a></li>
+                <li>
+                    <a href="/servicios" class="hover:underline">Servicios</a>
+                </li>
+                <li>
+                    <a href="/proyectos" class="hover:underline">Proyectos</a>
+                </li>
+                <li>
+                    <a href="/sobre-nosotros" class="hover:underline"
+                        >Sobre Nosotros</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold mb-2">Contacto</h2>
+            <ul class="space-y-2 text-sm">
+                <li>
+                    <i class="bi bi-telephone-inbound-fill mr-2"></i>{
+                        data.phone
+                    }
+                </li>
+                <li><i class="bi bi-geo-alt-fill mr-2"></i>{data.adress}</li>
+                <li><i class="bi bi-envelope-at mr-2"></i>{data.email}</li>
+            </ul>
+
+            <div class="mt-4 flex gap-4">
+                {
+                    data.socialNetworks.map((icon) => (
+                        <a
+                            href={icon.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white text-xl hover:text-gray-300 transition"
+                        >
+                            <i class={icon.icon} />
+                        </a>
+                    ))
+                }
+            </div>
+        </section>
+    </div>
+
+    <div class="border-t border-blue-800 mt-10 pt-4 text-center text-sm">
+        <p>&copy; 2025 OPREF S.A.S. Todos los derechos reservados.</p>
+    </div>
+</footer>

@@ -1,11 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutUs from "../components/AboutUsIndex.astro";
+import Services from "../components/ServicesIndex.astro";
+import CardBenefits from "../components/CardBenefits.astro";
+import WorkProcess from "../components/WorkProcess.astro";
+import Projects from "../components/Projects.astro"
 ---
 
 <Layout>
-	<Welcome />
+    <Hero />
+    <section class="bg-slate-100 pb-[100px]">
+        <div class="px-15 flex flex-wrap justify-between">
+            <CardBenefits
+                icon="bi bi-coin"
+                title="Precios Accesibles"
+                description="Ofrecemos opciones que se ajustan a tu presupuesto sin sacrificar calidad."
+            />
+            <CardBenefits
+                icon="bi bi-airplane-engines"
+                title="Rapido y Eficiente"
+                description="Entregamos tu proyecto en tiempo récord, con resultados impecables."
+            />
+            <CardBenefits
+                icon="bi bi-buildings"
+                title="Asesoría integral"
+                description="Te acompañamos en cada paso del proceso, desde la idea hasta la entrega."
+            />
+            <CardBenefits
+                icon="bi bi-shield-lock"
+                title="Calidad y Confianza"
+                description="Materiales de primera, mano de obra profesional, resultados duraderos."
+            />
+        </div>
+    </section>
+    <AboutUs />
+    <Services />
+    <Projects />
+    <WorkProcess />
 </Layout>
